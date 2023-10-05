@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            border: 10px solid black;
+            width: 200px;
+            height: 200px;
+        }
+        #box1 {background-color: tomato;}
+        #box2 {background-color: gold;}
+        #box3 {background-color: cornflowerblue;}
+
+        /* 
+            요소의 위치, position
+            1. padding > 부모가 자식의 위치 지정
+            2. margin > 스스로 위치 지정
+            3. position > 정석(CSS1 ~ CSS3)
+            4. transform > 정석(CSS3)
+
+
+            position
+            - 좌표값 사용 > 위치 지정
+            - x(left), y(top)
+            - 좌표를 지정하는 방식이 여러개 제공 > 원점(기준점)이 다양
+
+            1. position: static
+            - 기본값
+            - 정적 좌표
+            - x, y 사용 불가능
+            - 워드 프로세스 방식 > FlowLayout
+                - 코딩 순서대로 출력되는 방식
+
+            2. position: absolute
+            - 절대 좌표
+            - left, top
+            - 문서의 좌측 상단을 기준으로 한다.(X) > 자신의 직계 조상 중에서 가장 처음으로 만나는 (position이 static이 아닌) 태그를 원점으로 한다.(O)
+            - 원래 태그가 있던 공간은 사라진다.
+            
+            3. position: relative
+            - 상대 좌표
+            - left, top
+            - 자신의 위치를 원점으로 한다.
+            - 원래 태그가 있던 공간이 그대로 유지된다.
+
+            4. position: fixed
+            - 고정 좌표
+            - left, top
+            - 문서의 좌측 상단을 원점으로 한다.(X) > 브라우저 창의 좌측 상단을 원점으로 한다.(O) > 스크롤에 반응 안하고, 고정된다.
+            - 원래 태그가 있던 공간은 사라진다.
+        */
+
+        #box1 {
+            position: absolute;
+            left: 100px;
+            top: 200px;
+            z-index:3;
+        }
+
+        #box2 {
+            position: absolute;
+            left: 50px;
+            top: 150px;
+            z-index: 2;
+
+            /* position: relative;
+            left: 30px;
+            top: 30px; */
+
+            /* position: fixed;
+            left: 0px;
+            top: 0px; */
+        }
+
+        #b1, #b2, #b3 {
+            border: 10px solid black;
+        }
+
+        #b1 {
+            width: 500px;
+            height: 500px;
+            background-color: tomato;
+            position: absolute;
+            left: 300px;
+            top: 500px;
+        }
+        #b2 {
+            width: 400px;
+            height: 400px;
+            background-color: gold;
+            margin: 30px;
+            position: absolute;
+            left: 300px;
+            top: 500px;
+        }
+        #b3 {
+            width: 300px;
+            height: 300px;
+            background-color: dodgerblue;
+            margin: 30px;
+            position: absolute;
+            left: 300px;
+            top: 500px;
+        }
+        #box4 {
+            background-color: orange;
+            position: absolute;
+            /* left: 1000px; */
+            top: 0px;
+            right: 0px;
+            /* bottom: 0px; */
+        }
+    </style>
+</head>
+<body>
+    <!-- ex27_position.html -->
+
+    <div id="box4" class="box">상자</div>
+
+    <h1>absolute</h1>
+
+    <div id="b1">
+        박스1
+        <div id="b2">
+            박스2
+            <div id="b3">
+                박스3
+            </div>
+        </div>
+    </div>
+
+    <h1>position</h1>
+
+    <div id="box1" class="box">상자1</div>
+    <div id="box2" class="box">상자2</div>
+    <div id="box3" class="box">상자3</div>
+</body>
+</html>

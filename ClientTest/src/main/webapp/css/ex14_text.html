@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap');
+
+        
+
+        .txt {
+            /* background-color: yellow; */
+
+            /* 텍스트 색상, 전경색(Fore Color) */
+            /* color: red; */
+
+            color: #444444; /* #333333 ~ #555555 */
+
+            /* 텍스트 정렬(수평 정렬) */
+            text-align: left;
+
+            /* 텍스트 크기 */
+            /* font-size: 12pt; */
+            /* font-size: 16px; */
+            /* font-size: 10pt; */
+
+            /* font-size: 2rem; */
+
+            /* 
+                줄간격
+                - line-height
+                - %, em(rem), px
+                - 1.4rem ~ 1.8rem
+             */
+            line-height: 1.4rem;
+
+            /* 스타일(normal, italic) */
+            font-style: normal;
+
+            /* 두께(normal, bold) */
+            font-weight: normal;
+
+            /* 단어 간격(스페이스 크기) */
+            word-spacing: 0rem;
+
+            /* 자간(문자 간격) */
+            letter-spacing: -1px;
+
+            /* 꾸밈 */
+            text-decoration: none;
+
+            /* 폰트(서체, 글꼴) */
+            /* 
+                폰트
+                - 페이지 폰트는 서버측 폰트를 사용하는 것이 아니라,
+                브라우저가 동작 중인 클라이언트 컴퓨터의 폰트를 사용한다.(***)
+
+                폰트 예약어
+                - 폰트의 종류를 나타내는 용어
+                1. serif: 획끝에 장식이 있는 폰트(궁서체, 바탕체)
+                2. sans-seif: 획끝에 장식이 없는 폰트(돋움체, 고딕체)
+                3. monospace: 문자폭이 동일(궁서(X), 궁서체(O))
+                4. cursive: 장식체
+                5. fantasy: 장식체
+
+                웹 폰트
+                - 폰트를 서버로부터 다운로드 받아서 사용하는 기술
+                - 서핑 중인 페이지에만 적용
+                - 서비스 업체
+            */
+            /* font-family: 맑은 고딕, 궁서체, 바탕체, serif; */
+            /* font-family: 'Courier New', Courier, monospace; */
+            font-family: 'Black And White Picture', cursive;
+        }
+
+        p {
+            /* 들여쓰기 */
+            text-indent: 1rem;
+        }
+
+        .txt span {
+            /* background-color: yellow; */
+            /* font-size: 16px; */
+            /* font-size: 2em; */
+            /* font-size: 2rem; */
+        }
+
+        /* 
+            HTML 수치 표현법
+            1. 숫자(px, 문자수, 셀병합 크기)
+            2. 백분율(%)
+
+            CSS 수치 표현법
+            - 수체 데이터는 반드시(***) 단위 표기를 해야 한다.(생략 불가능 > 동작 안함)
+            1. pt: 포인트(글꼴), 절대값, 1/72인치
+            2. px: 픽셀(모든 분야, 크기, 여백, 위치, 글꼴 등), 절대값
+            3. em: 기본 글꼴 크기를 기준으로 하는 상대 크기(%), 알파벳 대문자 M의 높이를 100%으로 하는 상대 크기. 상대값. 상속 받음. 부모 글꼴 크기를 100%으로 하는 상대 크기.
+            4. rem: 기본 글꼴 크기를 기준으로 하는 상대 크기(%), 알파벳 대문자 M의 높이를 100%으로 하는 상대 크기. 상대값. 상속 받지 않음. 부모와 상관없이 브라우저의 기본 글꼴 크기를 100%으로 하는 상대 크기.
+            10. %: 백분율(크기, 여백, 위치, 정렬 등..), 상대값, 부모의 크기를 기준으로 하는 상대값
+            ---------------------------------------------------------------------------
+            5. ex: 알파벳 소문자 x의 높이를 100%으로 하는 상대 크기
+            6. mm: 밀리미터
+            7. cm: 센티미터
+            8. in: 인치
+            9. pc:
+            11. 기타 등등
+
+        */
+    </style>
+</head>
+
+<body>
+    <!-- ex14_text.html -->
+    <h1>텍스트 관련 속성</h1>
+
+    <p>감사원은 세입·세출의 결산을 매년 검사하여 대통령과 차년도국회에 그 결과를 보고하여야 한다. 모든 국민은 주거의 자유를 침해받지 아니한다. 주거에 대한 압수나 수색을 할 때에는 검사의 신청에 의하여
+        법관이 발부한 영장을 제시하여야 한다. 모든 국민은 사생활의 비밀과 자유를 침해받지 아니한다. 국무위원은 국무총리의 제청으로 대통령이 임명한다. 사법권은 법관으로 구성된 법원에 속한다. 공개하지 아니한
+        회의내용의 공표에 관하여는 법률이 정하는 바에 의한다. 국가의 세입·세출의 결산, 국가 및 법률이 정한 단체의 회계검사와 행정기관 및 공무원의 직무에 관한 감찰을 하기 위하여 대통령 소속하에 감사원을
+        둔다.</p>
+
+    <p class="txt">국회에서 의결된 법률안은 정부에 이송되어 15일 이내에 대통령이 공포한다. 모든 국민은 그 보호하는 자녀에게 적어도 초등교육과 법률이 정하는 교육을 받게 할 의무를 진다. 헌법재판소 재판관의 임기는
+        6년으로 하며, 법률이 정하는 바에 의하여 연임할 수 있다. <span>모든 국민은 인간다운 생활을 할 권리를 가진다. 국방상 또는 국민경제상 긴절한 필요로 인하여 법률이 정하는 경우를 제외하고는,</span> 사영기업을
+        국유 또는 공유로 이전하거나 그 경영을 통제 또는 관리할 수 없다. 행정각부의 설치·조직과 직무범위는 법률로 정한다. 재판의 심리와 판결은 공개한다. 다만, 심리는 국가의 안전보장 또는 안녕질서를
+        방해하거나 선량한 풍속을 해할 염려가 있을 때에는 법원의 결정으로 공개하지 아니할 수 있다.</p>
+
+    <p>모든 국민은 능력에 따라 균등하게 교육을 받을 권리를 가진다. 국가는 과학기술의 혁신과 정보 및 인력의 개발을 통하여 국민경제의 발전에 노력하여야 한다. 제1항의 해임건의는 국회재적의원 3분의 1 이상의
+        발의에 의하여 국회재적의원 과반수의 찬성이 있어야 한다. 국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 설치할 수 없다. 국가원로자문회의의 의장은 직전대통령이 된다.
+        다만, 직전대통령이 없을 때에는 대통령이 지명한다. 제안된 헌법개정안은 대통령이 20일 이상의 기간 이를 공고하여야 한다. 나는 헌법을 준수하고 국가를 보위하며 조국의 평화적 통일과 국민의 자유와
+        복리의 증진 및 민족문화의 창달에 노력하여 대통령으로서의 직책을 성실히 수행할 것을 국민 앞에 엄숙히 선서합니다.</p>
+
+    <hr>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis deleniti error architecto, repudiandae, alias distinctio ea ducimus odit voluptates eligendi cupiditate libero porro commodi natus doloremque ipsum, facilis nobis consectetur quam labore pariatur soluta! Asperiores eaque, accusamus, nemo porro natus culpa provident voluptate vitae ipsa consequuntur inventore odio est deserunt quas quae ea non sunt magni consectetur quibusdam error et rem? Rem officiis aut et suscipit distinctio saepe, quo doloribus totam sit? Ut placeat accusamus sunt ullam maiores repellendus aliquid culpa eveniet perspiciatis, atque itaque rerum nemo. Iure labore tenetur expedita a, consequatur molestias incidunt. Asperiores temporibus similique officia voluptatum!</p>
+    <p class="txt">Vel optio accusamus earum? Nesciunt, provident atque dicta fuga incidunt tempora odit ratione praesentium consequuntur deleniti quia eius dolorem possimus voluptas aut tempore numquam ipsum nisi ex quidem? Quas reprehenderit aliquam dolorem quisquam, iure nesciunt deserunt architecto aut eveniet optio vel voluptatem laudantium ea ex harum, quia ducimus dolores iste porro enim saepe error minus similique assumenda. Dolor alias ad atque ab illo eos incidunt explicabo ipsum illum omnis commodi enim voluptates quibusdam nostrum et tempore praesentium pariatur a, quo iusto odit repellat, veniam quidem ut! Itaque nam magni cum natus nihil unde fugiat ut reprehenderit! Modi magnam inventore minima?</p>
+    <p>Illo, corporis? Perspiciatis repudiandae, explicabo placeat delectus totam, eos accusamus atque velit laudantium assumenda temporibus? Voluptas error ipsam sit laborum atque illum aperiam. Beatae neque laborum exercitationem nihil error odio laboriosam blanditiis sunt? Reiciendis itaque earum, placeat quod cupiditate dignissimos, ullam dolorem minus consequatur similique numquam odio, vero accusantium. Facere sequi maxime magnam iusto enim quos officiis ullam autem dolores saepe suscipit quis tenetur, sit perspiciatis. Deserunt itaque, nihil rem quae eligendi fuga at doloribus sunt ea pariatur soluta quo quam impedit nam quaerat laborum delectus et sint dolore consectetur, sequi molestiae vel? Aut dolor enim quaerat optio voluptate quod!</p>
+
+
+</body>
+
+</html>
